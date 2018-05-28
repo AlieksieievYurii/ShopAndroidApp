@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dark_gradient"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:alpha="0.9"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/img_activity_main_logo"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_shop"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_layout"
+        android:visibility="gone"
+        android:layout_below="@id/img_activity_main_logo">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/btn_activity_main_add_goods"
+
+        app:cardBackgroundColor="#ab003a">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:layout_centerVertical="true"
+                android:text="Add"
+                android:layout_centerHorizontal="true"
+                android:textSize="30sp"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <ListView
+        android:id="@+id/lst_activity_main_list_of_goods"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@id/tv_activity_main_summa"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/btn_activity_main_add_goods" />
+
+    <TextView
+        android:id="@+id/tv_activity_main_text_summa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#007460"
+        android:padding="5dp"
+        android:gravity="left"
+        android:text="@string/text_txv_sum"
+        android:textColor="#bfbfbf"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tv_activity_main_summa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textColor="#bfbfbf"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:padding="5dp"
+        android:textSize="30sp"
+        tools:ignore="RelativeOverlap"
+        tools:text="999.9" />
+    </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

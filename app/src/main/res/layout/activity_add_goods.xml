@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="50dp"
+    android:background="@drawable/dark_gradient"
+    tools:context=".ActivityAddGoods">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="178dp"
+        android:layout_above="@+id/edt_activity_goods_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-138dp"
+        android:src="@drawable/ic_shop_add_activity" />
+
+    <EditText
+        android:id="@+id/edt_activity_goods_name"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#09000000"
+        android:textSize="30sp"
+        android:textColorHint="#818181"
+        android:textColor="#c9c4c4"
+        android:drawableLeft="@drawable/name_add_goods"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="165dp"
+        android:hint="@string/hint_name_goods"
+        android:inputType="text"
+        android:drawableStart="@drawable/name_add_goods" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:inputType="numberDecimal"
+        android:background="#09000000"
+        android:drawableLeft="@drawable/price_add_goods"
+        android:textSize="30sp"
+        android:textColor="#dcdada"
+        android:textColorHint="#818181"
+        android:id="@+id/edt_activity_goods_price"
+        android:layout_below="@id/edt_activity_goods_name"
+        android:layout_marginTop="5dp"
+        android:hint="@string/hint_price_goods"
+        android:drawableStart="@drawable/price_add_goods" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/cv_activity_goods_add"
+        app:cardBackgroundColor="@color/colorAccent"
+        app:cardCornerRadius="25dp"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/edt_activity_goods_price"
+        android:focusable="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="30sp"
+                android:textColor="#ffffff"
+                />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+</RelativeLayout>
